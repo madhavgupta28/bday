@@ -6,6 +6,19 @@ body {
     margin: 0;
     font-family: "Work Sans", sans-serif;
     background-image: url("img/love-image.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+/* Mobile fallback: background-attachment: fixed is poorly supported on mobile,
+   so switch to scroll there to avoid rendering/performance issues */
+@media (max-width: 800px), (max-height: 700px) {
+  body {
+    background-attachment: scroll;
+    background-position: center top;
+  }
 }
 
 .container {
